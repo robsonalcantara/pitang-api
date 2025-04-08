@@ -25,9 +25,16 @@ public class WebConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
+<<<<<<< Updated upstream
         config.addAllowedOrigin("https://desafio-pitang-myq12sop5-robsons-projects-a9b0c7dd.vercel.app");
         config.addAllowedOrigin("https://desafio-pitang-ng-vert.vercel.app");
         config.addAllowedOrigin("https://desafio-pitang-ng-git-main-robsons-projects-a9b0c7dd.vercel.app/");
+=======
+        config.setAllowedOriginPatterns(Arrays.asList(
+                "http://localhost:4200",
+                "https://*.vercel.app"
+        ));
+>>>>>>> Stashed changes
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.AUTHORIZATION,
                 HttpHeaders.CONTENT_TYPE,

@@ -31,23 +31,18 @@ Este projeto é uma API RESTful desenvolvida para o Desafio Pitang. Ela permite 
 
 1. **Clone o repositório**:
     ```bash
-    git clone git@github.com:robsonalcantara/pitang-angular.git
-	git clone git@github.com:robsonalcantara/pitang-api.git
+    git clone git@github.com:robsonalcantara/pitang-api.git
     ```
 
-2. **Instale as dependencias**
-    ```bash
-   npm install
-    ```
+2. **Abrir ide (eclipse/intellij)**
 
-3. **Inicie o projeto**
-    ```bash
-   npm run start
-    ```
+3. **Configurar o ambiente para utilizar o jdk-17**
+    
+4.**Inicialize a aplicação DesafioPitangApiApplication** no endereço:
 
-5. **A aplicação disponível** no endereço:
+5.**URL da API** 
     ```
-    http://localhost:4200/
+    http://localhost:8080/api
     ```
 
 
