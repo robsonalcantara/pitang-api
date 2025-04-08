@@ -40,16 +40,16 @@ public class SecurityConfig {
         			httpSecurityHeadersConfigurer.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable);
         		})
                 .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests((requests) -> requests
-						.requestMatchers(HttpMethod.POST, "/api/signin").permitAll()
-						.requestMatchers(HttpMethod.GET, "/api/users").permitAll()
-						.requestMatchers(HttpMethod.POST, "/api/users").permitAll()
-						.requestMatchers(HttpMethod.GET, "/api/users/{id}").permitAll()
-						.requestMatchers(HttpMethod.DELETE, "/api/users/{id}").permitAll()
-						.requestMatchers(HttpMethod.PUT, "/api/users/{id}").permitAll()
-                        .requestMatchers(AUTH_WHITELIST).permitAll()
+				.authorizeHttpRequests((requests) -> requests
+						.requestMatchers(HttpMethod.POST, "/signin").permitAll()
+						.requestMatchers(HttpMethod.GET, "/users").permitAll()
+						.requestMatchers(HttpMethod.POST, "/users").permitAll()
+						.requestMatchers(HttpMethod.GET, "/users/{id}").permitAll()
+						.requestMatchers(HttpMethod.DELETE, "/users/{id}").permitAll()
+						.requestMatchers(HttpMethod.PUT, "/users/{id}").permitAll()
+						.requestMatchers(AUTH_WHITELIST).permitAll()
 						.requestMatchers(toH2Console()).permitAll()
-                        .anyRequest().authenticated())
+						.anyRequest().authenticated())
         ;
         return http.build();
     }
