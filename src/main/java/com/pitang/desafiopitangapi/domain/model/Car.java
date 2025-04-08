@@ -118,6 +118,7 @@ public class Car {
         carDTO.setId(car.getId());
         carDTO.setYear(car.getYear());
         carDTO.setModel(car.getModel());
+        carDTO.setLicensePlate(car.getLicensePlate());
         carDTO.setColor(car.getColor());
         carDTO.setUsage(car.getUsage());
         carDTO.setUsageCount(car.getUsageCount());
